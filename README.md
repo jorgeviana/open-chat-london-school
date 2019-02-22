@@ -1,7 +1,7 @@
 # open-chat-london-school
 ### How the project was bootstrapped
 
-Using [this archtype](https://thepracticaldeveloper.com/archetypes) to create a simple Java 8 application. We also need to set interactive mode to false, otherwise the script will want to talk to you...
+Using [this archtype](https://thepracticaldeveloper.com/archetypes) to create a simple Java 8 application. We also need to set interactive mode to ```false```, otherwise the script will want to talk to us...
 
 Before pushing to Github, the ```open-chat-london-school``` repository has to be created. Visit https://github.com and create the repo!
 
@@ -27,5 +27,7 @@ git push -u origin master
 ```
 
 This is not enough to generate all the boilerplate for the project, we also need some manual steps to include all the dependencies that we are going to need, and we also need some Java code to create and start the web server.
+
+Configuration for running the unit and integration tests was also added to the project descriptor.
 
 Please have a look at the branch named '1-boilerplate'.
