@@ -17,9 +17,14 @@ public class OpenChat {
     private static final String INTERNAL_SERVER_ERROR = "Internal server error.";
 
     private Routes routes = new Routes();
+    private final int port;
+
+    public OpenChat(int port) {
+        this.port = port;
+    }
 
     public void start() {
-        port(4321);
+        port(this.port);
         enableCORS();
         setLog();
         routes.create();

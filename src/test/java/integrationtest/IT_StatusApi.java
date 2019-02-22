@@ -1,35 +1,23 @@
 package integrationtest;
 
-import io.github.jorgeviana.openchatlondon.OpenChat;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static integrationtest.Server.BASE_URL;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.Is.is;
 
 public class IT_StatusApi {
 
-    private static final String BASE_URL = "http://localhost:4321";
-    private static final OpenChat openChat = new OpenChat();
-
     @BeforeClass
     public static void setUp() {
-        startServer();
+        Server.start();
     }
 
     @AfterClass
     public static void tearDown() {
-        stopServer();
-    }
-
-    private static void startServer() {
-        openChat.start();
-        openChat.awaitInitialization();
-    }
-
-    private static void stopServer() {
-        openChat.stop();
+        Server.stop();
     }
 
     @Test public void
