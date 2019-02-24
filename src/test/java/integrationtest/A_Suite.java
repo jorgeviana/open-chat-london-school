@@ -7,7 +7,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        IT_StatusApi.class
+        IT_StatusApi.class,
+        IT_RegistrationApi.class
 })
 public class A_Suite {
 
